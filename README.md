@@ -1,4 +1,8 @@
 # Inventory Tracking system using Django
+Screenshots:
+![image](https://user-images.githubusercontent.com/20417069/148694150-cf273a7f-4dc3-4645-8c93-e45da8f160f7.png)
+![image](https://user-images.githubusercontent.com/20417069/148694171-e7d57db5-e230-487e-a679-218f1cd765b8.png)
+
 Setup:
 1. Git Clone the project with: 
   ```
