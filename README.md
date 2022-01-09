@@ -22,3 +22,6 @@ Setup:
   ```
   python3 manage.py runserver
   ```
+6. View the application at:
+  ```
+  http://localhost:8000/inventory_tracker/
