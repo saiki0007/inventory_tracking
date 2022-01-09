@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+{% block content %}
+    <div class="container">
+    <h3 align="center">Summary of Items</h3>
+        {% if items == None or items|length == 0 %}
+            <div style="center:width 50%; padding-top: 10px">
+                <h3 align="center" class="font-weight-light">No Items found! Items added to the inventory will be displayed here!</h3>
+            </div>
+        {% else %}
+            <div class="col-auto" style="float: right; padding-bottom: 10px">
+                    <a class="btn btn-primary" href="{% url 'tracking:export_csv' %}">Export to CSV</a>
+            </div>
+            <div style="center:width 50%;">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">Item ID</th>
+                            <th scope="col">Item Name</th>
+                            <th scope="col">Item Category</th>
+                            <th scope="col">Item Quantity</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for item in items %}
+                            <tr>
+                                <td>{{ item.item_id }}</td>
+                                <td>{{ item.item_name }}</td>
+                                <td>{{ item.item_type }}</td>
+                                <td>{{ item.item_quantity }}</td>
+                            </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+
+        {% endif %}
+        </div>
+{% endblock %}
