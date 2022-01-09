@@ -14,7 +14,7 @@ def download_csv(queryset):
     response['Content-Disposition'] = 'attachment; filename="export.csv"'
 
     # the csv writer
-    writer = csv.writer(response, delimiter=";")
+    writer = csv.writer(response, delimiter=",")
     # Write a first row with header information
     writer.writerow(field_names)
     # Write data rows
